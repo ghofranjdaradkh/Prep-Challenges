@@ -90,7 +90,7 @@ const cvFormatter = (arr) => {
 
     let reformattedCvs = [];
 for (let i = 0; i < arr.length; i++) {
-    // const cv = arr[i];
+   
     if (arr[i].yearsOfExperience > 1) {
       const fullName = arr[i].firstName + (arr[i].lastName ? " " + arr[i].lastName : "");
       const tech = arr[i].tech;
