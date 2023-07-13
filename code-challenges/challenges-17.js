@@ -15,17 +15,20 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
-    const arr=[]
-    if (int1!==-4){
-        arr.push(x)
-       const x= int1-int2}
-       else {
-        arr.push(x)
-        const x= int1+int2
-       }
-        recursionPattern(x,int2)
+  // write your code here
+  const arr = [];
+  const generatePattern = (int) => {
+    arr.push(int);
+    if (int <= 0) {
+      return int ;
     }
+    generatePattern(int - int2);
+    arr.push(int);
+  };
+  generatePattern(int1);
+  return arr;
+};
+
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -44,13 +47,20 @@ const recursionPattern = (int1, int2) => {
 // 
 
 const filterLinks = (str) => {
-    // write your code here
-    const regex = /http:\/\/www\.[A-Za-z]+\.(com|org|net)/ig
-    // regex=/http:\/\/www\.[Aa-Zz]+\.(com||org||net)/
-    const link=str.match(regex)
-    return link
-   
-}
+  // write your code here
+
+    const domainRegex = /(www\.[a-zA-Z0-9-]+\.(com|org|net))/;
+    const domainMatch = str.match(domainRegex);
+    
+    if (domainMatch) {
+      return domainMatch[0];
+    }
+  }
+
+  
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -68,8 +78,11 @@ const filterLinks = (str) => {
 //
 
 const isPalindrome = (str) => {
-    // write your code here
+  // write your code here
+  const newStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  return newStr === newStr.split('').reverse().join('');
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -92,7 +105,9 @@ const isPalindrome = (str) => {
 //
 
 const samePattern = (str, arr) => {
-    // write your code here
+  // write your code here
+
+
 }
 // -------------------------------------------------------------------------------------------------------
 
