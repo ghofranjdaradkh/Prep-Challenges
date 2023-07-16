@@ -20,15 +20,15 @@ const recursionPattern = (int1, int2) => {
   const generatePattern = (int) => {
     arr.push(int);
     if (int <= 0) {
-      return int ;
+      return int ;// stack 
     }
-    generatePattern(int - int2);
+    generatePattern(int - int2); //16 //11 //6 //1 //4
     arr.push(int);
   };
   generatePattern(int1);
   return arr;
 };
-
+// 16 -> 11
 
 // -------------------------------------------------------------------------------------------------------
 
