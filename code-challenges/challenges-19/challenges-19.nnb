@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "let length = 0;\n  while (length < s.length && length < t.length && s[length] === t[length]) {\n    length++;\n  }"
+                "function appendAndDelete(s, t, k) {\n  // Write your code here\n  let sArr = s.split('')\n  let tArr = t.split('')\n  let count = 0;\n  for (let i = 0; i === count && i < s.length; i++) {\n    if (sArr[i] === tArr[i]) {\n      count++\n    }\n  }\n\n  let tdiff = t.length - count\n  let sdiff = s.length - count\n\n  let remainMoves = k - (tdiff + sdiff)\n\n  if (tdiff + sdiff < k && t.length + s.length > k && remainMoves % 2 !== 0) {\n    return \"No\"\n  } else if (tdiff + sdiff <= k) {\n    return \"Yes\"\n  } else {\n    return \"No\"\n  }\n\n}"
             ],
             "outputs": []
         },
